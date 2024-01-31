@@ -1,0 +1,79 @@
+@import '../../../config-scss/rem-calc.scss';
+@import '../../../config-scss/status-color.scss';
+$padding: rem-calc(20);
+
+:host{
+    .listagem{display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        text-transform: capitalize;
+    
+        padding: $padding 0;
+    
+        .pokemon{
+            position: relative;
+            display: flex;
+            width: 16%;
+            height: rem-calc(100);
+            padding: $padding;
+            background-color: var(--white);
+            border-radius: rem-calc(10);
+            margin: rem-calc(13);
+    
+            text-decoration: none;
+            color: var(--primary-color);
+            
+            &-status{ 
+                h2{
+                    position: relative;
+                    z-index: 1;
+                    font-size: rem-calc(22);
+                    font-style: italic;
+                    font-weight: 700;
+                    margin-bottom: rem-calc(5);
+                }
+    
+                ul{
+                    display: flex;
+                    flex-direction: column;
+                }
+    
+                li{
+                    height: 15px;
+                    font-weight: 600;
+                    font-size: rem-calc(10);
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    
+                    border-radius: rem-calc(60);
+                    width: rem-calc(60);
+                    margin-bottom: rem-calc(5);
+                }
+            }
+    
+            
+            &-img{
+                display: flex;
+                align-items: center;
+                justify-content: end;
+                
+                height: rem-calc(90);
+                width: rem-calc(110);
+                position: absolute;
+                bottom: $padding;
+                right:$padding;
+    
+                filter: drop-shadow(5px -1px 1px #463e3e8e);
+    
+            }
+    
+                img{
+                    max-width: rem-calc(70);
+                    max-height: rem-calc(70);
+                    width: auto;
+                    height: auto;;
+                }
+        }}
+
+}
